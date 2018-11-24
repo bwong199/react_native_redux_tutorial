@@ -4,14 +4,15 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import reducers from './reducers';
 import { Header } from './components/common';
+import LibraryList from './components/LibraryList';
 
 const App = () => {
   return (
     <Provider store={createStore(reducers)}>
-    <View>
-    <Header headerText="Text Stack">
-      </Header>
-    </View>
+      <View>
+        <Header headerText="Text Stack"/>
+        <LibraryList/>
+      </View>
     </Provider>
   )
 }
